@@ -2,32 +2,57 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.twitter-meta {
+  width: 200px;
+  position: fixed;
+  left: 0;
+  overflow-y: scroll;
+  border-right: solid 1px lightgray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.shark-sightings {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  right: 0;
+  overflow-y: scroll;
+  border-left: solid 1px lightgray;
+}
+
+.side-bar-menus {
+  height: 100%;
+  top: 0;
+}
+
+.data {
+  padding: 0 250px 80px 250px;
+}
+
+#contentFooter {
+  z-index: 999;
+  border-top: 1px solid #d3d3d3;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  height: 80px;
+  padding-top: 10px;
+  background-image: url('./Images/photo-1475372674317-8003c861cb6a.jpeg');
+  background-position: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#contentFooter > a {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.shark-week-link {
+  color: white;
 }
