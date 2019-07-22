@@ -2,7 +2,6 @@ import React from 'react';
 import '../App.css';
 
 import SharkWeek from './SharkWeek';
-import TacoRecipe from './TacoRecipeCard';
 import Home from './Home'
 import Credits from './Credits';
 import PinnedSharkData from './PinnedSharkData';
@@ -20,7 +19,7 @@ class Layout extends React.Component {
                     <div>
                         <div className="header">
                             <h1>
-                                Tacos & Shark Week!
+                                Sharks, Sharks, Sharks!
                             </h1>
                         </div>
                         <ButtonGroup>
@@ -29,9 +28,6 @@ class Layout extends React.Component {
                             </Button>
                             <Button>
                                 <NavLink className="navLink" exact={true} to="/sharkStuff" activeClassName="selected" >Shark Facts</NavLink>
-                            </Button>
-                            <Button>
-                                <NavLink className="navLink" exact={true} to="/tacos" activeClassName="selected" >Tacos</NavLink>
                             </Button>
                             {
                                 /*
@@ -44,7 +40,6 @@ class Layout extends React.Component {
                         </ButtonGroup>
                         <Route exact={true} path="/" component={ Home } />
                         <Route exact={true} path="/sharkStuff" component={ SharkWeek } />
-                        <Route exact={true} path="/tacos" component={ TacoRecipe } />
                         <Route exact={true} path="/credits" component={ Credits } />
                     </div>
                 </Router>

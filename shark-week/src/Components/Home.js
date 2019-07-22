@@ -5,7 +5,7 @@ import YouTube from 'react-youtube';
 class Home extends React.Component {
     render() {
         const opts = {
-            height: '450',
+            height: '400',
             width: '550',
             playerVars: {
                 autoplay: 1
@@ -14,11 +14,8 @@ class Home extends React.Component {
         return (
             <div>
                 <h4>
-                    Shark week is truly the most wonderful time of the year!
+                    Shark week begins Sunday, July 28th
                 </h4>
-                <p>
-                    Let's celebrate it with cooking tacos and learning facts about sharks!
-                </p>
                 <YouTube
                     videoId="Ytjlns9zpo8"
                     opts={opts}

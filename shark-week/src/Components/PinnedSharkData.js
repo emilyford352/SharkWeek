@@ -35,7 +35,7 @@ class PinnedSharkData extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="shark-attacks">
                 <h3>
                     2018 Shark Attacks
                 </h3>

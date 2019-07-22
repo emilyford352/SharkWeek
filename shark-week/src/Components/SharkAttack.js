@@ -5,22 +5,28 @@ import ListItem from '@material-ui/core/ListItem';
 import Moment from 'react-moment';
 import moment from 'moment';
 
+//import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+//import { faCheckSquare, faCoffee } from '@fortawesome/fontawesome-free-solid'
+
 class SharkAttack extends React.Component {
     render() {
         const sharkAttack = this.props.sharkAttack;
-        //console.log(sharkAttack);
-        debugger
         const date = sharkAttack.fields.date;
+        const momentDate = new moment(date).format("MMM Do");
 
         return (
-            <ListItem style={{pull: 'right'}}>
-                <a href={sharkAttack.fields.href} target="_blank" >
-                    <b>
-                        { sharkAttack.fields.date }
-                    </b>
-                </a>
+            <ListItem className="shark-attack">
                 <div>
-                    {sharkAttack.fields.location}
+                    <a href={sharkAttack.fields.href} target="_blank" >
+                        <b>
+                            { momentDate }
+                        </b>
+                    </a>
+                </div>
+                <div className="attack-location">
+                    <small>
+                        {sharkAttack.fields.location}
+                    </small>
                 </div>
             </ListItem>
         );

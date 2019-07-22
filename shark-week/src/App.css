@@ -21,7 +21,25 @@
 
 .side-bar-menus {
   height: 100%;
+  bottom: 80px;
   top: 0;
+}
+
+.shark-attacks {
+  padding-bottom: 90px;
+}
+
+.shark-attack {
+  border-bottom: 1px solid lightgray;
+}
+
+.shark-attack:nth-child(1) {
+  border-top: 1px solid lightgray;
+}
+
+.attack-location {
+  text-align: right;
+  padding-left: 10px;
 }
 
 .data {
