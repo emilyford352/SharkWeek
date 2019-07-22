@@ -2,6 +2,8 @@ import React from 'react';
 import '../App.css';
 import SharkAttack from './SharkAttack';
 import List from '@material-ui/core/List';
+import Error from './Error';
+import Loading from './Loading';
 
 class PinnedSharkData extends React.Component {
     constructor(props) {
@@ -33,14 +35,18 @@ class PinnedSharkData extends React.Component {
     }
 
     render() {
+        const { isLoaded, sharkData, error } = this.state;
         return (
             <div className="shark-attacks">
                 <h3>
                     2018 Shark Attacks
                 </h3>
                 <List>
-                    {this.state.sharkData && this.state.sharkData.records.map((record) => <SharkAttack sharkAttack={record}/>)}
+                    { isLoaded && sharkData &&
+                      sharkData.records.map((record) => <SharkAttack sharkAttack={record}/>)}
                 </List>
+                { error && <Error error={error}/>}
+                { !isLoaded && <Loading/> }
             </div>
         );
     }
