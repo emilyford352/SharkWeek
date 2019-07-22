@@ -14,8 +14,7 @@ class PinnedSharkData extends React.Component {
     }
 
     componentDidMount() {
-        //fetch('https://data.opendatasoft.com/api/records/1.0/search/?dataset=global-shark-attack%40public-us&facet=date&facet=type&facet=country&facet=activity&facet=sex&facet=age&facet=fatal_y_n&facet=time&facet=species')
-        fetch('https://data.opendatasoft.com/api/records/1.0/search/?dataset=global-shark-attack%40public-us&lang=en&rows=10&sort=date&refine.date=2018')
+        fetch('https://data.opendatasoft.com/api/records/1.0/search/?dataset=global-shark-attack%40public-us&lang=en&rows=100&sort=date&refine.date=2018')
             .then(res => res.json())
             .then(
                 (result) => {
