@@ -3,7 +3,6 @@ import '../App.css';
 
 import SharkAttackMap from './SharkAttackMap';
 import Home from './Home'
-import Credits from './Credits';
 import PinnedSharkData from './PinnedSharkData';
 
 import Button from '@material-ui/core/Button';
@@ -27,20 +26,11 @@ class Layout extends React.Component {
                                 <NavLink className="navLink" exact={true} to="/" activeClassName="selected" >Home</NavLink>
                             </Button>
                             <Button>
-                                <NavLink className="navLink" exact={true} to="/sharkAttacks" activeClassName="selected" >Shark Attack Map</NavLink>
+                                <NavLink className="navLink" exact={true} to="/sharkAttacks" activeClassName="selected" >Shark Attacks</NavLink>
                             </Button>
-                            {
-                                /*
-                                <Button>
-                                    <NavLink className="navLink" exact={true} to="/credits" activeClassName="selected" >Credits</NavLink>
-                                </Button>
-                                 */
-                            }
-
                         </ButtonGroup>
                         <Route exact={true} path="/" component={ Home } />
                         <Route exact={true} path="/sharkAttacks" component={ SharkAttackMap } />
-                        <Route exact={true} path="/credits" component={ Credits } />
                     </div>
                 </Router>
                 <div className="twitter-meta side-bar-menus">

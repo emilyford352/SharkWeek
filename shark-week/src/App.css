@@ -23,6 +23,7 @@
   height: 100%;
   bottom: 80px;
   top: 0;
+  z-index: 999;
 }
 
 .shark-attacks {
@@ -74,3 +75,9 @@ a:visited {
 .shark-week-link {
   color: white;
 }
+
+.bar-chart {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
